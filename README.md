@@ -15,3 +15,14 @@ And then execute:
 Or install it yourself as:
 
     $ gem install sprockets-memcache-store
+
+## Configuration
+
+Set the following environment variables for production:
+
+    MEMCACHED_ENDPOINT
+    MEMCACHED_USERNAME
+    MEMCACHED_PASSWORD
+    MEMCACHED_SOCKET_TIMEOUT
+
+The `MEMCACHED_SOCKET_TIMEOUT` should be long enough (8000 or 8 seconds) to avoid Timeout issues.
