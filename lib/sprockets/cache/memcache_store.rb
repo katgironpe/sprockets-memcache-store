@@ -7,10 +7,9 @@ module Sprockets
     #     environment.cache = Sprockets::Cache::MemcacheStore.new
     #
     class MemcacheStore
-      def initialize(key_prefix = 'sprockets')
-        if ENV['MEMCACHED_ENDPOINT']
-          options = { username: ENV['MEMCACHED_USERNAME'], password: ENV['MEMCACHED_PASSWORD'], socket_timeout: ENV['MEMCACHED_SOCKET_TIMEOUT'] }
-          @memcache = Dalli::Client.new(ENV['MEMCACHED_ENDPOINT'], options)
+      def initialize(key_prefix = 'sprockets', endpoint = nil, options = nil)
+        if endpoint && options
+          @memcache = Dalli::Client.new(endpoint, options)
         else
           @memcache = Dalli::Client.new
         end
