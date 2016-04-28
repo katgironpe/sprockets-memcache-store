@@ -1,7 +1,7 @@
 # coding: utf-8
 Gem::Specification.new do |spec|
   spec.name          = "sprockets-memcache-store"
-  spec.version       = '0.0.4'
+  spec.version       = '0.0.2'
   spec.authors       = ["Alex MacCaw"]
   spec.email         = ["maccman@gmail.com"]
   spec.description   = %q{A Memcache store for Sprockets using Dalli}
