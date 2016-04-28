@@ -17,5 +17,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
 
   spec.add_dependency "dalli"
-  spec.add_dependency "sprockets", '~>3.5.2'
+  spec.add_dependency "sprockets", '~> 2.12'
 end
